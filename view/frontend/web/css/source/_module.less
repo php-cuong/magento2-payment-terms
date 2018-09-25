@@ -1,0 +1,40 @@
+/** This CSS helps to display and format the payment terms content */
+.checkout-agreement {
+    position: relative;
+    input {
+        margin-top: 0px;
+        position: absolute;
+        left: 0px;
+        top: 2px;
+    }
+    label {
+        padding-left: 20px;
+        margin-bottom: 0px;
+        button.action-show {
+            box-shadow: none !important;
+            text-transform: inherit;
+            cursor: text;
+            span {
+                color: #333;
+                font-weight: 600;
+                &:hover {
+                    color: #333;
+                    text-decoration: none;
+                }
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.checkout-agreements-item-content {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin: 15px 0px;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+.checkout-agreement-note {
+    font-weight: bold;
+}

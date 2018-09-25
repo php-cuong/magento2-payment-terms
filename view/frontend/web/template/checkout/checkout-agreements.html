@@ -1,0 +1,57 @@
+<!--
+/**
+ * GiaPhuGroup Co., Ltd.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GiaPhuGroup.com license that is
+ * available through the world-wide-web at this URL:
+ * https://www.giaphugroup.com/LICENSE.txt
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    PHPCuong
+ * @package     PHPCuong_PaymentTerms
+ * @copyright   Copyright (c) 2018-2019 GiaPhuGroup Co., Ltd. All rights reserved. (http://www.giaphugroup.com/)
+ * @license     https://www.giaphugroup.com/LICENSE.txt
+ */
+-->
+<div data-role="checkout-agreements">
+    <div class="checkout-agreements" data-bind="visible: isVisible">
+        <!-- I added these codes -->
+        <div class="checkout-agreement-note" data-bind="i18n: 'You need to read and agree to the payment terms:'"></div>
+        <!-- The end -->
+        <!-- ko foreach: agreements -->
+            <!-- I added these codes -->
+            <div class="checkout-agreements-item-content" data-bind="html: content"></div>
+            <!-- The end -->
+            <!-- ko if: ($parent.isAgreementRequired($data)) -->
+            <div class="checkout-agreement required">
+                <input type="checkbox" class="required-entry"
+                       data-bind="attr: {
+                                    'id': 'agreement_' + agreementId,
+                                    'name': 'agreement[' + agreementId + ']',
+                                    'value': agreementId
+                                    }"/>
+                <label data-bind="attr: {'for': 'agreement_' + agreementId}">
+                    <button type="button"
+                            class="action action-show"
+                            >
+                        <span data-bind="html: checkboxText"></span>
+                    </button>
+                </label>
+            </div>
+            <!-- /ko -->
+            <!-- ko ifnot: ($parent.isAgreementRequired($data)) -->
+            <div class="checkout-agreement">
+                <button type="button" class="action action-show">
+                    <span data-bind="html: checkboxText"></span>
+                </button>
+            </div>
+            <!-- /ko -->
+        <!-- /ko -->
+    </div>
+</div>
