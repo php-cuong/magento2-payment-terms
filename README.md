@@ -7,3 +7,4 @@ How to override a knockout HTML template file in Magento 2
 4. You will know, how to add the CSS to a custom module in Magento 2.
 # See the video about this practice
 - Youtube: https://www.youtube.com/watch?v=dCLKrKG7GTM&index=30&t=378s&list=PL98CDCbI3TNvPczWSOnpaMoyxVISLVzYQ
+- Facebook: https://www.facebook.com/giaphugroupcom/videos/2166578980335630/
